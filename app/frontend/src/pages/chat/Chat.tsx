@@ -3,6 +3,7 @@ import { Checkbox, Panel, DefaultButton, TextField, SpinButton, Dropdown, IDropd
 import { SparkleFilled } from "@fluentui/react-icons";
 import readNDJSONStream from "ndjson-readablestream";
 
+import sikaLogo from "../../assets/sika_logo.svg";
 import styles from "./Chat.module.css";
 
 import { chatApi, RetrievalMode, Approaches, AskResponse, ChatRequest, ChatTurn } from "../../api";
@@ -170,10 +171,11 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
+                            {/* <SparkleFilled fontSize={"120px"} primaryFill={"rgba(216, 40, 47, 1)"} aria-hidden="true" aria-label="Chat logo" /> */}
+                            <img src={sikaLogo} />
                             <h1 className={styles.chatEmptyStateTitle}>Chat with your data</h1>
-                            <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2>
-                            <ExampleList onExampleClicked={onExampleClicked} />
+                            <h2 className={styles.chatEmptyStateSubtitle}>Ask anything</h2>
+                            {/* <ExampleList onExampleClicked={onExampleClicked} /> */}
                         </div>
                     ) : (
                         <div className={styles.chatMessageStream}>
@@ -217,7 +219,7 @@ const Chat = () => {
                     <div className={styles.chatInput}>
                         <QuestionInput
                             clearOnSend
-                            placeholder="Type a new question (e.g. does my plan cover annual eye exams?)"
+                            placeholder="Type a new question (e.g. How can I seal the leaking in my basement?)"
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                         />
