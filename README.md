@@ -2,6 +2,8 @@
 
 Welcome to the new and dancy assistant which gives you the information you need whenever you need it.
 
+You can try it yourself at https://app-backend-t5wloy75g44ny.azurewebsites.net/.
+
 Hello Sika uses Azure cognitive search with OpenAI to provide accurate results, and Azure Web App Service to provide the functionality.
 
 ![Architecture](docs/hello-sika.png)
