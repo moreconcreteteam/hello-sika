@@ -12,20 +12,6 @@ const Layout = () => {
                     <Link to="/" className={styles.headerTitleContainer}>
                         <h3 className={styles.headerTitle}>Sika Knowledge Base</h3>
                     </Link>
-                    <nav>
-                        <ul className={styles.headerNavList}>
-                            <li>
-                                <NavLink to="/" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
-                                    Chat
-                                </NavLink>
-                            </li>
-                            <li className={styles.headerNavLeftMargin}>
-                                <NavLink to="/qa" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
-                                    Ask a question
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </header>
 

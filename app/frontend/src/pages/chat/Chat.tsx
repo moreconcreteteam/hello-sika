@@ -175,7 +175,6 @@ const Chat = () => {
                             <img src={sikaLogo} />
                             <h1 className={styles.chatEmptyStateTitle}>Chat with your data</h1>
                             <h2 className={styles.chatEmptyStateSubtitle}>Ask anything</h2>
-                            {/* <ExampleList onExampleClicked={onExampleClicked} /> */}
                         </div>
                     ) : (
                         <div className={styles.chatMessageStream}>
